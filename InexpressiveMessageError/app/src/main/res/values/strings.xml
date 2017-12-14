@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">InexpressiveMessageError</string>
+    <string name="app_name">Demo - Inexpressive Message Error</string>
+    <string name="Wifi_on">Wifi on</string>
+    <string name="Wifi_off">Wifi off</string>
+    <string name="Movil_on">Movil data on</string>
+    <string name="Movil_off">Movil data off</string>
 </resources>

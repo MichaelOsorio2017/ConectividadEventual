@@ -6,13 +6,41 @@
     android:layout_height="match_parent"
     tools:context="com.example.stive.inexpressivemessageerror.MainActivity">
 
+
+    <Switch
+        android:id="@+id/switchWifi"
+        android:layout_width="82dp"
+        android:layout_height="27dp"
+        android:textOn="@string/Wifi_on"
+        android:textOff="@string/Wifi_off"
+        android:textAllCaps="false"
+        tools:layout_editor_absoluteX="271dp"
+        tools:layout_editor_absoluteY="38dp" />
+
+    <Switch
+        android:id="@+id/switchMovile"
+        android:layout_width="82dp"
+        android:layout_height="27dp"
+        android:textOn="@string/Movil_on"
+        android:textOff="@string/Movil_off"
+        android:textAllCaps="false"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="239dp"
+        android:layout_height="38dp"
+        android:text="WiFi connection State of your phone"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:paddingLeft="40dp"/>
+
+    <TextView
+        android:layout_width="239dp"
+        android:layout_height="38dp"
+        android:text="WiFi connection State of your phone"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="38dp" />
+
 
 </android.support.constraint.ConstraintLayout>
