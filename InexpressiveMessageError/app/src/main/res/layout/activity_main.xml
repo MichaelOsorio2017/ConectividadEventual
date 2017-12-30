@@ -1,46 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.stive.inexpressivemessageerror.MainActivity">
-
-
-    <Switch
-        android:id="@+id/switchWifi"
-        android:layout_width="82dp"
-        android:layout_height="27dp"
-        android:textOn="@string/Wifi_on"
-        android:textOff="@string/Wifi_off"
-        android:textAllCaps="false"
-        tools:layout_editor_absoluteX="271dp"
-        tools:layout_editor_absoluteY="38dp" />
-
-    <Switch
-        android:id="@+id/switchMovile"
-        android:layout_width="82dp"
-        android:layout_height="27dp"
-        android:textOn="@string/Movil_on"
-        android:textOff="@string/Movil_off"
-        android:textAllCaps="false"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+    tools:context="com.example.stive.inexpressivemessageerror.MainActivity"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp">
+    <TextView
+        android:id="@+id/txtIntroduction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Introducction"
+        android:layout_alignParentTop="true"
+        android:textAlignment="inherit"
+        />
 
     <TextView
-        android:layout_width="239dp"
-        android:layout_height="38dp"
-        android:text="WiFi connection State of your phone"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        android:paddingLeft="40dp"/>
+        android:autoLink="web"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/antipattern"
+        android:layout_below="@id/txtIntroduction"
+        android:text="@string/antipattern"
+        />
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/antipattern"
+        android:id="@+id/space" />
 
     <TextView
-        android:layout_width="239dp"
-        android:layout_height="38dp"
-        android:text="WiFi connection State of your phone"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="38dp" />
+        android:id="@+id/txtBeginSteps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/space"
+        android:text="@string/airplane_on"
+        android:textAlignment="inherit"
+        />
 
+    <Button
+        android:id="@+id/btnGenericMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtBeginSteps"
+        android:text="@string/genericMessage"
+        android:textAlignment="center"
+        android:background="@color/colorGenericMessage"
+        android:layout_marginTop="8dp"/>
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/btnExceptionTrace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/space"
+        android:layout_below="@+id/btnGenericMessage"
+        android:text="@string/exceptionTrace"
+        android:textAlignment="center"
+        android:background="@color/colorExceptionTrace"
+        android:layout_marginTop="8dp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btnExceptionTrace"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        app:srcCompat="@color/colorBackground" />
+
+</RelativeLayout>

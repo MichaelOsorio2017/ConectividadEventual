@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">Demo - Inexpressive Message Error</string>
-    <string name="Wifi_on">Wifi on</string>
-    <string name="Wifi_off">Wifi off</string>
-    <string name="Movil_on">Movil data on</string>
-    <string name="Movil_off">Movil data off</string>
+
+    <string name="airplane_on">Please turn on the airplane mode on your phone and make click on previous button</string>
+    <string name="Introducction">This app allow you interact with a common error in eventual connectivity.</string>
+    <string name="antipattern">The antipatern <i> <u> Inexpressive Message error </u> </i> will be show here</string>
+    <string name="genericMessage">Generic Message</string>
+    <string name="exceptionTrace">Message With Exception Trace</string>
+
+
 </resources>
