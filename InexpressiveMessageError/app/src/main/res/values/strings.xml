@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Demo - Inexpressive Message Error</string>
 
-    <string name="airplane_on">Please turn on the airplane mode on your phone and make click on previous button</string>
+    <string name="airplane_on">Please interact with the below buttons. The correct behavior is when there is internet connection in this device. For proof the error, please turn on the airplane mode</string>
     <string name="Introducction">This app allow you interact with a common error in eventual connectivity.</string>
-    <string name="antipattern">The antipatern <i> <u> Inexpressive Message error </u> </i> will be show here</string>
+    <string name="antipattern">The antipattern <i> <u> Inexpressive Message error </u> </i> will be show here, with its sub-antipatterns</string>
     <string name="genericMessage">Generic Message</string>
     <string name="exceptionTrace">Message With Exception Trace</string>
 
