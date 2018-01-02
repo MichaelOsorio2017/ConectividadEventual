@@ -53,13 +53,40 @@
         android:textAlignment="center"
         android:background="@color/colorGenericMessage"
         android:layout_marginTop="8dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnGenericMessage"
+        android:id="@+id/genericMessageDetail">
+        <TextView
+            android:id="@+id/descriptionGeneric"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description of GenericMessage"
+            android:layout_alignParentTop="true"/>
+
+        <Button
+            android:id="@+id/btnLivetest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descriptionGeneric"
+            android:text="Live test" />
+
+        <Button
+            android:id="@+id/btnDescriptiongeneric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/descriptionGeneric"
+            android:text="See description" />
+    </RelativeLayout>
 
     <Button
         android:id="@+id/btnExceptionTrace"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/space"
-        android:layout_below="@+id/btnGenericMessage"
+        android:layout_below="@+id/genericMessageDetail"
         android:text="@string/exceptionTrace"
         android:textAlignment="center"
         android:background="@color/colorExceptionTrace"
