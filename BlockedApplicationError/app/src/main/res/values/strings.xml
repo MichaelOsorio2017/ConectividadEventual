@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Demo - Blocked Application Error</string>
+
+    <string name="Introducction">This app allow you interact with a common error in eventual connectivity.</string>
+    <string name="Introduction_2">Please interact with the below buttons. The correct behavior is when there is internet connection in this device. For proof the error, please turn on the airplane mode</string>
+    <string name="antipattern">The antipattern <i> <u> Blocked Application </u> </i> will be show here, with its sub-antipatterns</string>
+    <string name="completelyBlocked">Completely Blocked</string>
+    <string name="partiallyBlocked">Partially Blocked</string>
+</resources>
