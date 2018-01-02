@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
@@ -57,7 +58,14 @@ public class MainActivity extends AppCompatActivity {
         btnCompletelyBlocked.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                URL url = new URL();
+                try {
+                    URL url = new URL("https://github.com/MichaelOsorio2017/ConectividadEventual/blob/master/Descripciones/Completely_Blocked.PNG?raw=true");
+                    HttpURLConnection conn =(HttpURLConnection)url.openConnection();
+                    conn.connect();
+
+                }catch (Exception e){
+
+                }
             }
         });
 
