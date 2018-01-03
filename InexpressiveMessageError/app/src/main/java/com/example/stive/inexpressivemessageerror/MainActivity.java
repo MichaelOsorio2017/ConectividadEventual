@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.net.HttpURLConnection;
@@ -23,11 +24,18 @@ import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView description;
-    Button btnGenericMessage;
-    Button btnExceptionTrace;
-    Context context = this;
-    ImageView image;
+    private TextView description;
+    private Button btnGenericMessage;
+    private Button btnExceptionTrace;
+    private Button btnExamplesGeneric;
+    private Button btnExamplesException;
+    private Button btnTestGeneric;
+    private Button btnTestException;
+    private Context context = this;
+    private ImageView image;
+    private RelativeLayout genericMessageDetail;
+    private RelativeLayout exceptionTraceDetail;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
         btnGenericMessage = (Button)findViewById(R.id.btnGenericMessage);
         image = (ImageView)findViewById(R.id.imageView);
         btnExceptionTrace = (Button)findViewById(R.id.btnExceptionTrace);
+        genericMessageDetail = (RelativeLayout)findViewById(R.id.genericMessageDetail);
+        exceptionTraceDetail = (RelativeLayout)findViewById(R.id.exceptionTraceDetail);
+        btnExamplesGeneric = (Button)findViewById(R.id.btnExamplesGeneric);
+        btnExamplesException = (Button)findViewById(R.id.btnExamplesException);
+        btnTestGeneric = (Button)findViewById(R.id.btnLivetest);
+        btnTestException = (Button)findViewById(R.id.btnLivetest2);
 
         description.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,11 +77,79 @@ public class MainActivity extends AppCompatActivity {
         btnGenericMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new callImageGenericMessage().execute();
+
+                if(genericMessageDetail.getVisibility() == View.GONE) {
+                    genericMessageDetail.setVisibility(View.VISIBLE);
+                }else{
+                    genericMessageDetail.setVisibility(View.GONE);
+                }
             }
         });
 
         btnExceptionTrace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(exceptionTraceDetail.getVisibility() == View.GONE) {
+                    exceptionTraceDetail.setVisibility(View.VISIBLE);
+                }else{
+                    exceptionTraceDetail.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        btnExamplesGeneric.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://ml-papers.gitlab.io/android.connectivity-2017/online-appendix/antipatternExample.html?pID=IEM-GM");
+                ConnectivityManager connectivityManager = (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
+                WifiManager wifiManager = (WifiManager)context.getSystemService(Context.WIFI_SERVICE);
+                NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+
+                if(networkInfo != null){
+                    if(networkInfo.isAvailable() && networkInfo.isConnected()){
+                        Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+                        startActivity(intent);
+                    }
+                }else if(wifiManager.isWifiEnabled() && wifiManager.getWifiState() != WifiManager.WIFI_STATE_ENABLING){
+                    Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(getApplicationContext(),"No internet connection. Make sure Wi-Fi or cellular data is turned on, then try again.",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        btnExamplesException.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://ml-papers.gitlab.io/android.connectivity-2017/online-appendix/antipatternExample.html?pID=IEM-MET");
+                ConnectivityManager connectivityManager = (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
+                WifiManager wifiManager = (WifiManager)context.getSystemService(Context.WIFI_SERVICE);
+                NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+
+                if(networkInfo != null){
+                    if(networkInfo.isAvailable() && networkInfo.isConnected()){
+                        Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+                        startActivity(intent);
+                    }
+                }else if(wifiManager.isWifiEnabled() && wifiManager.getWifiState() != WifiManager.WIFI_STATE_ENABLING){
+                    Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(getApplicationContext(),"No internet connection. Make sure Wi-Fi or cellular data is turned on, then try again.",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        btnTestGeneric.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new callImageGenericMessage().execute();
+            }
+        });
+
+        btnTestException.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new callImageExceptionTrace().execute();
@@ -81,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
             URL urlImage = null;
             HttpURLConnection conn = null;
             try{
-                urlImage = new URL("https://github.com/MichaelOsorio2017/ConectividadEventual/blob/master/Descripciones/Generic_Message.PNG?raw=true");
+                urlImage = new URL("https://github.com/MichaelOsorio2017/ConectividadEventual/blob/master/Resourses/NoNetwork.png?raw=true");
                 conn = (HttpURLConnection)urlImage.openConnection();
                 conn.connect();
                 BitmapFactory.Options options = new BitmapFactory.Options();
@@ -116,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
             URL urlImage = null;
             HttpURLConnection conn = null;
             try{
-                urlImage = new URL("https://github.com/MichaelOsorio2017/ConectividadEventual/blob/master/Descripciones/Exception_Trace.PNG?raw=true");
+                urlImage = new URL("https://github.com/MichaelOsorio2017/ConectividadEventual/blob/master/Resourses/noConnection.png?raw=true");
                 conn = (HttpURLConnection)urlImage.openConnection();
                 conn.connect();
                 BitmapFactory.Options options = new BitmapFactory.Options();
