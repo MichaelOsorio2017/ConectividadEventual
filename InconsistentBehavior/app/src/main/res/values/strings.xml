@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Demo - Inconsistent Behavior</string>
+
+    <string name="Introducction">This app allow you interact with a common error in eventual connectivity.</string>
+    <string name="antipattern">The antipattern <i> <u> Inconsistent Behavior </u> </i> will be show here.</string>
+
+    <string name="see_examples">see examples</string>
+    <string name="live_test">Live test</string>
+    <string name="inconsistentBehaviourDescription">The app has an inconsistent behavior. It says that is doing something, but it does not do that  or it has a different behavior.</string>
+    <string name="inconsistentBehavior">inconsistent behavior</string>
+</resources>

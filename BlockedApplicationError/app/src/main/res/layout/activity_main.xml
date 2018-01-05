@@ -36,35 +36,113 @@
         android:layout_below="@+id/antipattern"
         android:id="@+id/space" />
 
-    <TextView
-        android:id="@+id/txtBeginSteps"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/space"
-        android:text="@string/Introduction_2"
-        android:textAlignment="inherit"
-        />
-
     <Button
         android:id="@+id/btnCompletelyBlocked"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtBeginSteps"
+        android:layout_below="@+id/space"
         android:text="@string/completelyBlocked"
         android:textAlignment="center"
-        android:layout_marginTop="8dp"
         android:background="@color/colorCompletelyBlocked" />
+
+    <RelativeLayout
+        android:id="@+id/completelyBlockedDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCompletelyBlocked"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/descriptioncompletelyBlocked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/completelyBlockedDescription" />
+
+        <Button
+            android:id="@+id/btnTestcompletelyBlocked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/descriptioncompletelyBlocked"
+            android:layout_toStartOf="@id/space2"
+            android:text="@string/live_test"
+            android:textAlignment="center" />
+
+        <Space
+            android:id="@+id/space2"
+            android:layout_width="8dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/btnTestcompletelyBlocked"
+            android:layout_below="@id/descriptioncompletelyBlocked"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/btnExamplecompletelyBlocked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/descriptioncompletelyBlocked"
+            android:layout_toEndOf="@id/space2"
+            android:text="@string/see_examples"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/btnPartiallyBlocked"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/space"
-        android:layout_below="@+id/btnCompletelyBlocked"
+        android:layout_below="@+id/completelyBlockedDetail"
         android:text="@string/partiallyBlocked"
         android:textAlignment="center"
         android:layout_marginTop="8dp"
         android:background="@color/colorPartiallyBlocked"/>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnPartiallyBlocked"
+        android:id="@+id/partiallyBlockedDetail"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/descriptionPartiallyBlocked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/partiallyBlockedDescription" />
+
+        <Button
+            android:id="@+id/btnTestPartiallyBlocked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/descriptionPartiallyBlocked"
+            android:layout_toStartOf="@id/space3"
+            android:text="@string/live_test"
+            android:textAlignment="center" />
+
+        <Space
+            android:id="@+id/space3"
+            android:layout_width="8dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/descriptionPartiallyBlocked"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/btnExamplePartially"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/descriptionPartiallyBlocked"
+            android:layout_toEndOf="@id/space3"
+            android:text="@string/see_examples"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

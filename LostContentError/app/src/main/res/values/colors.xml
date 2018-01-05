@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#372554</color>
+    <color name="colorPrimaryDark">#616161</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorBlankMap">#C8C3D0</color>
+    <color name="colorBlurredMap">#B6B2BE</color>
+    <color name="colorBlankImage">#A49BB1</color>
+    <color name="colorLostFunctionality">#7F7492</color>
+    <color name="colorLostText">#746A85</color>
+</resources>

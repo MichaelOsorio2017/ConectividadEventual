@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.stive.lostcontenterror.MainActivity"
+    android:paddingRight="8dp"
+    android:paddingLeft="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtIntroduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Introducction"
+            android:layout_alignParentTop="true"
+            android:textAlignment="inherit"
+            android:layout_marginTop="8dp"
+            />
+
+        <TextView
+            android:autoLink="web"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/antipattern"
+            android:layout_below="@id/txtIntroduction"
+            android:text="@string/antipattern"
+            />
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/antipattern"
+            android:id="@+id/space" />
+
+        <Button
+            android:id="@+id/btnBlankMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/space"
+            android:text="@string/blank_map"
+            android:textAlignment="center"
+            android:background="@color/colorBlankMap"
+            android:layout_marginBottom="8dp"/>
+
+        <RelativeLayout
+            android:id="@+id/blankMapDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/btnBlankMap"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/descriptionBlankMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/blank_map_Description" />
+
+            <Button
+                android:id="@+id/btnTestBlankMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/space2"
+                android:text="@string/live_test"
+                android:textAlignment="center"/>
+
+            <Space
+                android:id="@+id/space2"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/descriptionBlankMap"
+                android:layout_centerHorizontal="true"
+                />
+            <Button
+                android:id="@+id/btnExamplesBlankMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/space2"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/descriptionBlankMap"
+                android:text="@string/see_examples"
+                android:textAlignment="center"
+                />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnBlurredMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/space"
+            android:layout_below="@+id/blankMapDetail"
+            android:text="@string/blurred_Map"
+            android:textAlignment="center"
+            android:background="@color/colorBlurredMap"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <RelativeLayout
+            android:id="@+id/blurredMapDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/btnBlurredMap"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/descriptionBlurredMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/blurred_map_Description" />
+
+            <Button
+                android:id="@+id/btnTestBlurredMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/space3"
+                android:text="@string/live_test"
+                android:textAlignment="center"/>
+
+            <Space
+                android:id="@+id/space3"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/descriptionBlurredMap"
+                android:layout_centerHorizontal="true"
+                />
+            <Button
+                android:id="@+id/btnExamplesBlurredMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/descriptionBlurredMap"
+                android:layout_toEndOf="@id/space3"
+                android:text="@string/see_examples"
+                android:textAlignment="center"
+                />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnBlankImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/space"
+            android:layout_below="@+id/blurredMapDetail"
+            android:text="@string/blank_image"
+            android:textAlignment="center"
+            android:background="@color/colorBlankImage"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <RelativeLayout
+            android:id="@+id/blankImageDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/btnBlankImage"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/descriptionBlankImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/blank_image_Description" />
+
+            <Button
+                android:id="@+id/btnTestBlankImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/space4"
+                android:text="@string/live_test"
+                android:textAlignment="center"/>
+
+            <Space
+                android:id="@+id/space4"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/descriptionBlankImage"
+                android:layout_centerHorizontal="true"
+                />
+            <Button
+                android:id="@+id/btnExamplesBlankImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/descriptionBlankImage"
+                android:layout_toEndOf="@id/space4"
+                android:text="@string/see_examples"
+                android:textAlignment="center"
+                />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnLostFunctionality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/space"
+            android:layout_below="@+id/blankImageDetail"
+            android:text="@string/lost_Functionality"
+            android:textAlignment="center"
+            android:background="@color/colorLostFunctionality"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <RelativeLayout
+            android:id="@+id/lostFunctionalityDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/btnLostFunctionality"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/descriptionLostFunctionality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/lost_functionality_Description" />
+
+            <Button
+                android:id="@+id/btnTestLostFunctionality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/space5"
+                android:text="@string/live_test"
+                android:textAlignment="center"/>
+
+            <Space
+                android:id="@+id/space5"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/descriptionLostFunctionality"
+                android:layout_centerHorizontal="true"
+                />
+            <Button
+                android:id="@+id/btnExamplesLostFunctionality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/descriptionLostFunctionality"
+                android:layout_toEndOf="@id/space5"
+                android:text="@string/see_examples"
+                android:textAlignment="center"
+                />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnLostText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/space"
+            android:layout_below="@+id/lostFunctionalityDetail"
+            android:text="@string/lost_Text"
+            android:textAlignment="center"
+            android:background="@color/colorLostText"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <RelativeLayout
+            android:id="@+id/lostTextDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/btnLostText"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/descriptionLostText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/lost_text_Description" />
+
+            <Button
+                android:id="@+id/btnTestLostText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/space6"
+                android:text="@string/live_test"
+                android:textAlignment="center"/>
+
+            <Space
+                android:id="@+id/space6"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/descriptionLostText"
+                android:layout_centerHorizontal="true"
+                />
+            <Button
+                android:id="@+id/btnExamplesLostText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/descriptionLostText"
+                android:layout_toEndOf="@id/space6"
+                android:text="@string/see_examples"
+                android:textAlignment="center"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</ScrollView>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Demo - Lost Content Error</string>
+
+    <string name="Introducction">This app allow you interact with a common error in eventual connectivity.</string>
+    <string name="antipattern">The antipattern <i> <u> Lost Content Error </u> </i> will be show here, with its sub-antipatterns.</string>
+
+    <string name="see_examples">See Examples</string>
+    <string name="blank_map">Blank Map</string>
+    <string name="blurred_Map">Blurred Map</string>
+    <string name="blank_image">Blank Image</string>
+    <string name="lost_Functionality">Lost Functionality</string>
+    <string name="lost_Text">Lost Text</string>
+    <string name="blank_map_Description">A blank map is displayed because there is no connection to internet. The app does not warn that there is no connection to internet or do it in a bad way.</string>
+    <string name="blurred_map_Description">The map is displayed but when the user try to zoom, it becomes blurry and does not allow to see the detail</string>
+    <string name="blank_image_Description">A blank image is displayed because there is no connection to internet. The app does not warn that there is no connection to internet or do it in a bad way.</string>
+    <string name="lost_functionality_Description">A functionality is not available because there is no connection; the components that allows using the functionality disappear or are disabled but there is not message notifying the user about it</string>
+    <string name="lost_text_Description">A text section is not available because there is no connection</string>
+    <string name="live_test">Live Test</string>
+    <string name="title_activity_blurred_map">Map</string>
+    <string name="gallery_item_transition" translatable="false">gallery_transition</string>
+</resources>
