@@ -1,18 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.stive.inconsistentmessage.MainActivity">
+    tools:context="com.example.stive.inconsistentmessage.MainActivity"
+    android:paddingRight="8dp"
+    android:paddingLeft="8dp">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/txtIntroduction"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/Introducction"
+        android:layout_alignParentTop="true"
+        android:textAlignment="inherit"
+        />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:autoLink="web"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/antipattern"
+        android:layout_below="@id/txtIntroduction"
+        android:text="@string/antipattern"
+        />
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/antipattern"
+        android:id="@+id/space" />
+    <Button
+        android:id="@+id/btnInconsistentMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/space"
+        android:text="@string/inconsistentMessage"
+        android:textAlignment="center"
+        android:background="@color/colorInconsistentMessage" />
+
+    <RelativeLayout
+        android:id="@+id/inconsistentMessageDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnInconsistentMessage"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/descriptionInconsistentMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/inconsistentMessageDescription" />
+
+        <Button
+            android:id="@+id/btnTestInconsistentMessa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/descriptionInconsistentMessage"
+            android:layout_toStartOf="@id/space2"
+            android:text="@string/live_test"
+            android:textAlignment="center" />
+
+        <Space
+            android:id="@+id/space2"
+            android:layout_width="8dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/btnTestInconsistentMessa"
+            android:layout_below="@id/descriptionInconsistentMessage"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/btnExampleInconsistentMessa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/descriptionInconsistentMessage"
+            android:layout_toEndOf="@id/space2"
+            android:text="@string/see_examples"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

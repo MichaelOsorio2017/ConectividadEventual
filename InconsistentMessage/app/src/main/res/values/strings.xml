@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">InconsistentMessage</string>
+    <string name="app_name">Demo - Inconsistent Message</string>
+
+    <string name="Introducction">This app allow you interact with a common error in eventual connectivity.</string>
+    <string name="antipattern">The antipattern <i> <u> Inconsistent Message </u> </i> will be show here, with its sub-antipatterns</string>
+    <string name="inconsistentMessage">Inconsistent Message</string>
+    <string name="live_test">Live Test</string>
+    <string name="see_examples">see examples</string>
+    <string name="inconsistentMessageDescription">The app shows an inconsistent message. It says something that has nothing to do with the action performed by the user.</string>
 </resources>
