@@ -29,33 +29,32 @@ import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnPhantomBehavior;
-    private RelativeLayout phantomBehaviorDetail;
+    private Button btnStuckedProgressNotification;
+    private RelativeLayout stuckedProgressDetail;
     private TextView description;
     private Context context = this;
-    private Button btnPhantomExamples;
+    private Button btnStuckedProgressNotiExamples;
     private Button btnLiveTest;
     private ImageView image;
-    private ProgressDialog progress;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnPhantomBehavior = (Button)findViewById(R.id.btnPhantomBehavior);
-        phantomBehaviorDetail = (RelativeLayout)findViewById(R.id.phantonBehaviorDetail);
+        btnStuckedProgressNotification = (Button)findViewById(R.id.btnStuckedProgressNoti);
+        stuckedProgressDetail = (RelativeLayout)findViewById(R.id.stuckedProgressNotiDetail);
         description = (TextView)findViewById(R.id.antipattern);
-        btnPhantomExamples = (Button)findViewById(R.id.btnPhantomExamples);
+        btnStuckedProgressNotiExamples = (Button)findViewById(R.id.btnStuckedProgressNotiExample);
         btnLiveTest = (Button)findViewById(R.id.btnLivetest);
         image = (ImageView)findViewById(R.id.imageView);
 
-        btnPhantomBehavior.setOnClickListener(new View.OnClickListener() {
+        btnStuckedProgressNotification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(phantomBehaviorDetail.getVisibility() == View.GONE){
-                    phantomBehaviorDetail.setVisibility(View.VISIBLE);
+                if(stuckedProgressDetail.getVisibility() == View.GONE){
+                    stuckedProgressDetail.setVisibility(View.VISIBLE);
                 }else{
-                    phantomBehaviorDetail.setVisibility(View.GONE);
+                    stuckedProgressDetail.setVisibility(View.GONE);
                 }
             }
         });
@@ -82,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnPhantomExamples.setOnClickListener(new View.OnClickListener() {
+        btnStuckedProgressNotiExamples.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Uri uri = Uri.parse("https://ml-papers.gitlab.io/android.connectivity-2017/online-appendix/antipatternExample.html?pID=PHB-SPN");

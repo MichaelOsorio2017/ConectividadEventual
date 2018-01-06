@@ -2,7 +2,9 @@
     <string name="app_name">Demo - Phantom Behavior Error</string>
 
     <string name="Introducction">This app allow you interact with a common error in eventual connectivity.</string>
-    <string name="antipattern">The antipattern <i> <u> Phantom Behavior </u> </i> will be show here.</string>
-    <string name="completelyBlocked">Phantom Behavior</string>
+    <string name="antipattern">The antipattern <i> <u> Phantom Behavior </u> </i> will be show here, with its sub-antipatterns</string>
+    <string name="stuckedProgressNoti">Stucked Progress Notification</string>
     <string name="phantomBehaviorDescription">There is an “apparent” execution of a process/task (reported via notification, dialog, message, etc.), however, there is no real execution of the task.</string>
+    <string name="stuckedProgressNotificationDescription">The progress notification keeps stucked when the connection to internet is off. It seems like the content is being loaded, but the progress notification is blocked</string>
+
 </resources>

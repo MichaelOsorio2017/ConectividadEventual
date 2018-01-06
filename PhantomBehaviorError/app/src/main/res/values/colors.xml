@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#616161</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorPhantomBehavior">#5E574D</color>
+    <color name="colorStuckedProgressNotification">#D3DBCE</color>
 </resources>
