@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
         btnTestRedirectToApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+
             }
         });
 

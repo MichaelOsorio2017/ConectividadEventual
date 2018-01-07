@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Demo - Unavailable Functionality After Connection Recovery</string>
+
+    <string name="Introducction">This app allow you interact with a common error in eventual connectivity.</string>
+    <string name="antipattern">The antipattern <i> <u> Unavailable Functionality After Connection Recovery</u> </i> will be show here.</string>
+
+    <string name="live_test">Live Test</string>
+    <string name="see_examples">See Examples</string>
+
+    <string name="unavailableFunction">Unavailable Functionality After Connection Recovery</string>
+    <string name="unavailableFunctionDescription">One or more functionalities of a view in an application are not responding after connection recovery.</string>
+</resources>
