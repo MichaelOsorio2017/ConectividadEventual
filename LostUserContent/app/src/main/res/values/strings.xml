@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">LostUserContent</string>
+    <string name="app_name">Demo - Lost User Content</string>
+    <string name="Introducction">This app allow you interact with a common error in eventual connectivity.</string>
+    <string name="antipattern">The antipattern <i> <u> Lost User Content Error </u> </i> will be show here.</string>
+    <string name="lostUserContent">Lost User Content</string>
+    <string name="lostUserContentDescription">The user has some content or work done, and because of a connection problem it is lost by the app.</string>
+    <string name="live_test">Live Test</string>
+    <string name="see_examples">See Examples</string>
 </resources>
