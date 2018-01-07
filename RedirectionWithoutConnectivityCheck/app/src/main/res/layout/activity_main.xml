@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.stive.redirectionwithoutconnectivitycheck.MainActivity"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <TextView
+        android:id="@+id/txtIntroduction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Introducction"
+        android:layout_alignParentTop="true"
+        android:textAlignment="inherit"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:autoLink="web"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/antipattern"
+        android:layout_below="@id/txtIntroduction"
+        android:text="@string/antipattern"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/antipattern"
+        android:id="@+id/space" />
+    <Button
+        android:id="@+id/btnRedirectToWebPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/space"
+        android:text="@string/redirectionToWebPage"
+        android:textAlignment="center"
+        android:background="@color/colorRedirectionToWebPage"
+        android:layout_marginBottom="8dp"/>
+
+    <RelativeLayout
+        android:id="@+id/redirecToWebPageDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/btnRedirectToWebPage"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/descriptionRedirectToWebPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/redirectionToWebPageDescription" />
+
+        <Button
+            android:id="@+id/btnTestRedirectionToWebPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/descriptionRedirectToWebPage"
+            android:layout_toStartOf="@id/space2"
+            android:text="Live test"
+            android:textAlignment="center" />
+
+        <Space
+            android:id="@+id/space2"
+            android:layout_width="8dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/btnExampleRedirectionToWebPage"
+            android:layout_below="@id/descriptionRedirectToWebPage"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/btnExampleRedirectionToWebPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/descriptionRedirectToWebPage"
+            android:layout_toEndOf="@id/space2"
+            android:text="@string/see_examples"
+            android:textAlignment="center" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnRedirectToApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/redirecToWebPageDetail"
+        android:text="@string/redirectionToApp"
+        android:textAlignment="center"
+        android:background="@color/colorRedirectionToApp"
+        android:layout_marginBottom="8dp"/>
+
+    <RelativeLayout
+        android:id="@+id/redirecToAppDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/btnRedirectToApp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/descriptionRedirectToApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/redirectionToAppDescription" />
+
+        <Button
+            android:id="@+id/btnTestRedirectionToApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/descriptionRedirectToApp"
+            android:layout_toStartOf="@id/space3"
+            android:text="Live test"
+            android:textAlignment="center" />
+
+        <Space
+            android:id="@+id/space3"
+            android:layout_width="8dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/btnExampleRedirectionToApp"
+            android:layout_below="@id/descriptionRedirectToApp"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/btnExampleRedirectionToApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/descriptionRedirectToApp"
+            android:layout_toEndOf="@id/space3"
+            android:text="@string/see_examples"
+            android:textAlignment="center" />
+    </RelativeLayout>
+
+</RelativeLayout>

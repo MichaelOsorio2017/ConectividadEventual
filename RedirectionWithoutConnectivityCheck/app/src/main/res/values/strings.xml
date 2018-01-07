@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Demo - Redirection Without Connectivity Check</string>
+
+    <string name="live_test">Live Test</string>
+    <string name="see_examples">See Examples</string>
+
+    <string name="Introducction">This app allow you interact with a common error in eventual connectivity.</string>
+    <string name="antipattern">The antipattern <i> <u> Redirection Without Connectivity Check </u> </i> will be show here.</string>
+
+    <string name="redirectionToWebPage">Redirection to a web page without connectivity check</string>
+    <string name="redirectionToApp">Redirection to a different app without connectivity</string>
+
+    <string name="redirectionToWebPageDescription">The app redirects the user to a web page (using a browser) and it does not  works because it has not internet connection.</string>
+    <string name="redirectionToAppDescription">The app redirects the user to  another app (different than a browser) and it does not  works because it has not internet connection.</string>
+
+</resources>
