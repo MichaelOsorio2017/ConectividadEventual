@@ -138,5 +138,20 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        btnTestRedirectToWebPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        btnTestRedirectToApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+            }
+        });
+
+
     }
 }
