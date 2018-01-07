@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Demo - Nonexistent Result Notification Error</string>
+
+    <string name="Introducction">This app allow you interact with a common error in eventual connectivity.</string>
+    <string name="antipattern">The antipattern <i> <u> Nonexistent Result Notification </u> </i> will be show here.</string>
+
+    <string name="live_test">Live Test</string>
+    <string name="see_examples">See Examples</string>
+
+    <string name="downloadingContent">Nonexistent notification of progress while downloading content</string>
+    <string name="downloadingContentIssue">Nonexistent notification of an issue while downloading content</string>
+    <string name="actionPerformedSuccessfully">Nonexistent notification for an action performed successfully</string>
+    <string name="problemPerformingAnAction">Nonexistent notification  of problem when performing an action </string>
+    <string name="processExecutedInBackground">Nonexistent notification of a process being executed in background</string>
+    <string name="retryingAnAction">Nonexistent notification of retrying an action</string>
+
+    <string name="downloadingContentDescription">The app does not show anything indicating that the required content is being downloaded. It seems that nothing happened.</string>
+    <string name="downloadingContentIssueDescription">The app does not show anything indicating that the required content could not be downloaded. It seems that nothing happened.</string>
+    <string name="actionPerformedSuccessfullyDescription">The app does not show any result or message indicating that the action carried out by the user was performed successfully. It seems that nothing happened.</string>
+    <string name="problemPerformingAnActionDescription">The app does not show any result or message indicating that the action carried out by the user was not performed successfully because of a connectivity problem . It seems that nothing happened.</string>
+    <string name="processExecutedInBackgroundDescription">The app does not show any message that indicates that a process is being executed in background. It seems that nothing happened.</string>
+    <string name="retryingAnActionDescription">The app does not show any message that indicates that the user should retrying the action.</string>
+
+</resources>

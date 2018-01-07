@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#7189FF</color>
+    <color name="colorPrimaryDark">#616161</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorDownloadingContent">#D8DEFF</color>
+    <color name="colorIssueWhileDownloadingContent">#BEC9FF</color>
+    <color name="colorActionPerformedSuccessfully">#A4B3FF</color>
+    <color name="colorProblemWhenPerformingAnAction">#8a9eff</color>
+    <color name="colorProcessBeingExecutedInBackground">#7E90E8</color>
+    <color name="colorRetryingAnAction">#7383D3</color>
+
+</resources>

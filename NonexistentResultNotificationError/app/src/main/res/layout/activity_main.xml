@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.stive.nonexistentresultnotificationerror.MainActivity"
+    android:paddingRight="8dp"
+    android:paddingLeft="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtIntroduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Introducction"
+            android:layout_alignParentTop="true"
+            android:textAlignment="inherit"
+            android:layout_marginTop="8dp"
+            />
+
+        <TextView
+            android:autoLink="web"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/antipattern"
+            android:layout_below="@id/txtIntroduction"
+            android:text="@string/antipattern"
+            />
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/antipattern"
+            android:id="@+id/space" />
+
+        <Button
+            android:id="@+id/btnDownloadingContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/space"
+            android:text="@string/downloadingContent"
+            android:textAlignment="center"
+            android:background="@color/colorDownloadingContent"
+            android:layout_marginBottom="8dp"/>
+
+        <RelativeLayout
+            android:id="@+id/downloadingContentDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnDownloadingContent"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/descriptionDownloadContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/downloadingContentDescription"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descriptionDownloadContent"
+                android:id="@+id/btnTestDownloadContent"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/space2"
+                android:text="@string/live_test"/>
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:id="@+id/space2"
+                android:layout_below="@id/descriptionDownloadContent"
+                android:layout_alignBottom="@id/btnExamplesDownloadContent"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnExamplesDownloadContent"
+                android:layout_below="@id/descriptionDownloadContent"
+                android:text="@string/see_examples"
+                android:layout_toEndOf="@id/space2"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnIssueDownloadingContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/downloadingContentDetail"
+            android:text="@string/downloadingContentIssue"
+            android:textAlignment="center"
+            android:background="@color/colorIssueWhileDownloadingContent"
+            android:layout_marginBottom="8dp"/>
+
+        <RelativeLayout
+            android:id="@+id/downloadingContentIssueDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnIssueDownloadingContent"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/descriptionDownloadContentIssue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/downloadingContentIssueDescription"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descriptionDownloadContentIssue"
+                android:id="@+id/btnTestDownloadContentIssue"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/space3"
+                android:text="@string/live_test"/>
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:id="@+id/space3"
+                android:layout_below="@id/descriptionDownloadContentIssue"
+                android:layout_alignBottom="@id/btnExamplesDownloadContentIssue"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnExamplesDownloadContentIssue"
+                android:layout_below="@id/descriptionDownloadContentIssue"
+                android:text="@string/see_examples"
+                android:layout_toEndOf="@id/space3"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btnActionPerformedSuccessfully"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/downloadingContentIssueDetail"
+            android:text="@string/actionPerformedSuccessfully"
+            android:textAlignment="center"
+            android:background="@color/colorActionPerformedSuccessfully"
+            android:layout_marginBottom="8dp"/>
+
+        <RelativeLayout
+            android:id="@+id/actionPerformedSuccessfullyDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnActionPerformedSuccessfully"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/descriptionActionPerformedSuccess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/actionPerformedSuccessfullyDescription"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descriptionActionPerformedSuccess"
+                android:id="@+id/btnTestActionPerformedSuccess"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/space4"
+                android:text="@string/live_test"/>
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:id="@+id/space4"
+                android:layout_below="@id/descriptionActionPerformedSuccess"
+                android:layout_alignBottom="@id/btnExamplesActionPerformedSuccess"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnExamplesActionPerformedSuccess"
+                android:layout_below="@id/descriptionActionPerformedSuccess"
+                android:text="@string/see_examples"
+                android:layout_toEndOf="@id/space4"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnProblemWhenPerformedAnAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/actionPerformedSuccessfullyDetail"
+            android:text="@string/problemPerformingAnAction"
+            android:textAlignment="center"
+            android:background="@color/colorProblemWhenPerformingAnAction"
+            android:layout_marginBottom="8dp"/>
+
+        <RelativeLayout
+            android:id="@+id/actionProblemPerformingAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnProblemWhenPerformedAnAction"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/descriptionProblemPerformingAction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/problemPerformingAnActionDescription"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descriptionProblemPerformingAction"
+                android:id="@+id/btnTestProblemPerformingAction"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/space5"
+                android:text="@string/live_test"/>
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:id="@+id/space5"
+                android:layout_below="@id/descriptionProblemPerformingAction"
+                android:layout_alignBottom="@id/btnExamplesProblemPerformingAction"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnExamplesProblemPerformingAction"
+                android:layout_below="@id/descriptionProblemPerformingAction"
+                android:text="@string/see_examples"
+                android:layout_toEndOf="@id/space5"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnProcessInBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/actionProblemPerformingAction"
+            android:text="@string/processExecutedInBackground"
+            android:textAlignment="center"
+            android:background="@color/colorProcessBeingExecutedInBackground"
+            android:layout_marginBottom="8dp"/>
+
+        <RelativeLayout
+            android:id="@+id/actionProcessInBackgroundDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnProcessInBackground"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/descriptionProcessInBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/processExecutedInBackgroundDescription"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descriptionProcessInBackground"
+                android:id="@+id/btnTestProcessInBackground"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/space6"
+                android:text="@string/live_test"/>
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:id="@+id/space6"
+                android:layout_below="@id/descriptionProcessInBackground"
+                android:layout_alignBottom="@id/btnExamplesProcessInBackground"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnExamplesProcessInBackground"
+                android:layout_below="@id/descriptionProcessInBackground"
+                android:text="@string/see_examples"
+                android:layout_toEndOf="@id/space6"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnRetryingAnAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/actionProcessInBackgroundDetail"
+            android:text="@string/retryingAnAction"
+            android:textAlignment="center"
+            android:background="@color/colorRetryingAnAction"
+            android:layout_marginBottom="8dp"/>
+
+        <RelativeLayout
+            android:id="@+id/retryingAnActionDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnRetryingAnAction"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/descriptionRetryingAnAction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/retryingAnActionDescription"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descriptionRetryingAnAction"
+                android:id="@+id/btnTestRetryingAnAction"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/space7"
+                android:text="@string/live_test"/>
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:id="@+id/space7"
+                android:layout_below="@id/descriptionRetryingAnAction"
+                android:layout_alignBottom="@id/btnExampleRetryingAnAction"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnExampleRetryingAnAction"
+                android:layout_below="@id/descriptionRetryingAnAction"
+                android:text="@string/see_examples"
+                android:layout_toEndOf="@id/space7"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>
