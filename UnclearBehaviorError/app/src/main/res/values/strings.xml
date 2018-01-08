@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Demo - Unclear Behavior Error</string>
+
+    <string name="Introducction">This app allow you interact with a common error in eventual connectivity.</string>
+    <string name="antipattern">The antipattern <i> <u> Unclear Behavior Error </u> </i> will be show here, with its anti-patterns</string>
+
+    <string name="live_test">Live Test</string>
+    <string name="see_examples">See Examples</string>
+
+    <string name="randomActions">Random Actions</string>
+    <string name="unclearEventsSequence">Unclear Events Sequence</string>
+
+    <string name="randomActionsDescription">The application, under the same scenario, has different results/responses in a random way.</string>
+    <string name="unclearEventsSequenceDescription">The application, under the same scenario, has different results/responses following a specific pattern</string>
+
+</resources>
