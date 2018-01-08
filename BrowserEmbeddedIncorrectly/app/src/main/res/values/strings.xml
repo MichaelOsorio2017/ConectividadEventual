@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Demo - Browser Embedded Incorrectly</string>
+
+    <string name="Introducction">This app allow you interact with a common error in eventual connectivity.</string>
+    <string name="antipattern">The antipattern <i> <u> Browser Embedded Incorrectly</u> </i> will be show here, with its sub-antipatterns</string>
+
+    <string name="live_test">Live Test</string>
+    <string name="see_examples">See Examples</string>
+
+    <string name="webPageEmbeddedIncorrectly">Local WebPage Embedded Incorrectly</string>
+    <string name="externalWebPageEmbedded">External WebPage Embedded</string>
+    <string name="mapFileEmbeddedIncorrectly">Map File Embedded Incorrectly</string>
+
+    <string name="webPageEmbeddedIncorrectlyDescription">The app redirects the user to an activity with an embedded web page from a local file and it does not works because it has no internet connection.</string>
+    <string name="externalWebPageEmbeddedDescription">The app redirects the user to an activity with an embedded web page from a external source (url) and it does not works because it has no internet connection.</string>
+    <string name="mapFileEmbeddedIncorrectlyDescription">The app redirects the user to an activity with an Map made in a local file and it does not works because it has no internet connection.</string>
+
+</resources>

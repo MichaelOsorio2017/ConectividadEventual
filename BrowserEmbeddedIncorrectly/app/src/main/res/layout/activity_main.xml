@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.stive.browserembeddedincorrectly.MainActivity"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtIntroduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Introducction"
+            android:layout_alignParentTop="true"
+            android:textAlignment="inherit"
+            android:layout_marginTop="8dp"
+            />
+
+        <TextView
+            android:autoLink="web"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/antipattern"
+            android:layout_below="@id/txtIntroduction"
+            android:text="@string/antipattern"
+            />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/antipattern"
+            android:id="@+id/space" />
+
+        <Button
+            android:id="@+id/btnWebPageEmbeddedIncorrectly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/space"
+            android:text="@string/webPageEmbeddedIncorrectly"
+            android:textAlignment="center"
+            android:background="@color/colorWebPageEmbeddedIncorrectly"
+            android:layout_marginBottom="8dp"/>
+
+        <RelativeLayout
+            android:id="@+id/webPageEmbeddedIncorrectlyDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/btnWebPageEmbeddedIncorrectly"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/descriptionWebPageEmbedded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/webPageEmbeddedIncorrectlyDescription" />
+
+            <Button
+                android:id="@+id/btnTestWebPageEmbedded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/descriptionWebPageEmbedded"
+                android:layout_toStartOf="@id/space2"
+                android:text="Live test"
+                android:textAlignment="center" />
+
+            <Space
+                android:id="@+id/space2"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/btnExampleWebPageEmbedded"
+                android:layout_below="@id/descriptionWebPageEmbedded"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/btnExampleWebPageEmbedded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/descriptionWebPageEmbedded"
+                android:layout_toEndOf="@id/space2"
+                android:text="@string/see_examples"
+                android:textAlignment="center" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnExternalWebPageEmbeddedIncorrectly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/webPageEmbeddedIncorrectlyDetail"
+            android:text="@string/externalWebPageEmbedded"
+            android:textAlignment="center"
+            android:background="@color/colorExternalWebPageEmbedded"
+            android:layout_marginBottom="8dp"/>
+
+        <RelativeLayout
+            android:id="@+id/externalWebPageEmbeddedDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/btnExternalWebPageEmbeddedIncorrectly"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/descriptionExternalWebPageEmbedded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/externalWebPageEmbeddedDescription" />
+
+            <Button
+                android:id="@+id/btnTestExternalWebPageEmbedded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/descriptionExternalWebPageEmbedded"
+                android:layout_toStartOf="@id/space3"
+                android:text="Live test"
+                android:textAlignment="center" />
+
+            <Space
+                android:id="@+id/space3"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/btnExampleExternalWebPageEmbedded"
+                android:layout_below="@id/descriptionExternalWebPageEmbedded"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/btnExampleExternalWebPageEmbedded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/descriptionExternalWebPageEmbedded"
+                android:layout_toEndOf="@id/space3"
+                android:text="@string/see_examples"
+                android:textAlignment="center" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnMapFileEmbedded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/externalWebPageEmbeddedDetail"
+            android:text="@string/mapFileEmbeddedIncorrectly"
+            android:textAlignment="center"
+            android:background="@color/colorMapEmbeddedIncorrectly"
+            android:layout_marginBottom="8dp"/>
+
+        <RelativeLayout
+            android:id="@+id/mapFileEmbeddedDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/btnMapFileEmbedded"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/descriptionMapEmbedded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/mapFileEmbeddedIncorrectlyDescription" />
+
+            <Button
+                android:id="@+id/btnTestMapFileEmbedded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/descriptionMapEmbedded"
+                android:layout_toStartOf="@id/space4"
+                android:text="Live test"
+                android:textAlignment="center" />
+
+            <Space
+                android:id="@+id/space4"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/btnExampleMapFileEmbedded"
+                android:layout_below="@id/descriptionMapEmbedded"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/btnExampleMapFileEmbedded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/descriptionMapEmbedded"
+                android:layout_toEndOf="@id/space4"
+                android:text="@string/see_examples"
+                android:textAlignment="center" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>
