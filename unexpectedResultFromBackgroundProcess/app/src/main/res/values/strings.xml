@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Demo - Unexpected Result From Background Process</string>
+
+    <string name="Introducction">This app allow you interact with a common error in eventual connectivity.</string>
+    <string name="antipattern">The antipattern <i> <u> Unexpected Result From Background Process </u> </i> will be show here.</string>
+
+    <string name="unexpectedResult">Unexpected result from background  process</string>
+    <string name="unexpectedResultDescription">There was an unexpected background process which produced a result, and it was not informed to the user.</string>
+
+    <string name="live_test">Live Test</string>
+    <string name="see_examples">See Examples</string>
+</resources>
