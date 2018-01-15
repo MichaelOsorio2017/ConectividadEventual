@@ -8,4 +8,8 @@
     <string name="live_test">Live test</string>
     <string name="inconsistentBehaviourDescription">The app has an inconsistent behavior. It says that is doing something, but it does not do that  or it has a different behavior.</string>
     <string name="inconsistentBehavior">inconsistent behavior</string>
+
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">98FjhQDrvjImreS4UaH3sDV6u</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">lGe1HBHiviAAYg72Jb3toISt5YD4AMbOOL61qHZZXrOWgrqZY5</string>
+    <string name="empty">THERE ARE NO TWEETS FOR SHOW</string>
 </resources>

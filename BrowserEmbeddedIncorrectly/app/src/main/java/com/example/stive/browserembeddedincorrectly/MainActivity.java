@@ -197,7 +197,7 @@ public class MainActivity extends AppCompatActivity {
         btnTestMapFile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+
             }
         });
 

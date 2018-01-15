@@ -1,12 +1,11 @@
 package com.example.stive.phantombehaviorerror;
 
-import android.app.ProgressDialog;
+
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Rect;
-import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -17,12 +16,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -40,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         btnStuckedProgressNotification = (Button)findViewById(R.id.btnStuckedProgressNoti);
         stuckedProgressDetail = (RelativeLayout)findViewById(R.id.stuckedProgressNotiDetail);
@@ -106,8 +103,8 @@ public class MainActivity extends AppCompatActivity {
         btnLiveTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,"Downloading...",Toast.LENGTH_SHORT).show();
-                new callImageExceptionTrace().execute();
+                Intent intent = new Intent(context,StuckedProgressActivity.class);
+                startActivity(intent);
             }
         });
     }
