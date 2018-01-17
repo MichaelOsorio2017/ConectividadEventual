@@ -21,4 +21,5 @@
     <string name="processExecutedInBackgroundDescription">The app does not show any message that indicates that a process is being executed in background. It seems that nothing happened.</string>
     <string name="retryingAnActionDescription">The app does not show any message that indicates that the user should retrying the action.</string>
 
+    <string name="connectivityError">No internet connection. Make sure Wi-Fi or cellular data is turned on, then try again.</string>
 </resources>
