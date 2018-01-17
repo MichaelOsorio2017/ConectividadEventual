@@ -141,14 +141,18 @@ public class MainActivity extends AppCompatActivity {
         btnTestRedirectToWebPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Uri uri = Uri.parse("https://en.wikipedia.org/wiki/Android_(operating_system)");
+                Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+                startActivity(intent);
             }
         });
 
         btnTestRedirectToApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Uri uri = Uri.parse("https://youtu.be/zlcv2FNWp88");
+                Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+                startActivity(intent);
             }
         });
 
