@@ -163,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
             URL urlImage = null;
             HttpURLConnection conn = null;
             try{
-                urlImage = new URL("https://github.com/MichaelOsorio2017/ConectividadEventual/blob/master/Resourses/NoNetwork.png?raw=true");
+                urlImage = new URL("https://github.com/MichaelOsorio2017/ConectividadEventual/blob/master/Resources/NoNetwork.png?raw=true");
                 conn = (HttpURLConnection)urlImage.openConnection();
                 conn.connect();
                 BitmapFactory.Options options = new BitmapFactory.Options();
@@ -198,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
             URL urlImage = null;
             HttpURLConnection conn = null;
             try{
-                urlImage = new URL("https://github.com/MichaelOsorio2017/ConectividadEventual/blob/master/Resourses/noConnection.png?raw=true");
+                urlImage = new URL("https://github.com/MichaelOsorio2017/ConectividadEventual/blob/master/Resources/noConnection.png?raw=true");
                 conn = (HttpURLConnection)urlImage.openConnection();
                 conn.connect();
                 BitmapFactory.Options options = new BitmapFactory.Options();

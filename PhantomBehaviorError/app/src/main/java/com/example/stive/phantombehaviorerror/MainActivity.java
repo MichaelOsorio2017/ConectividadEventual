@@ -152,34 +152,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    private class callImageExceptionTrace extends AsyncTask<Void,Void,Bitmap> {
-
-        protected Bitmap doInBackground(Void... voids){
-            URL urlImage = null;
-            HttpURLConnection conn = null;
-            try{
-                urlImage = new URL("https://github.com/MichaelOsorio2017/ConectividadEventual/blob/master/Resourses/noConnection.png?raw=true");
-                conn = (HttpURLConnection)urlImage.openConnection();
-                conn.connect();
-                BitmapFactory.Options options = new BitmapFactory.Options();
-                options.inSampleSize = 1;
-                return BitmapFactory.decodeStream(conn.getInputStream(), new Rect(0,0,0,0),options);
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-            return null;
-        }
-
-        protected void onPostExecute(Bitmap bitmap){
-            try{
-                image.setImageBitmap(bitmap);
-            }catch(Exception e){
-                e.printStackTrace();
-            }
-        }
-
-    }
-
-
 }
