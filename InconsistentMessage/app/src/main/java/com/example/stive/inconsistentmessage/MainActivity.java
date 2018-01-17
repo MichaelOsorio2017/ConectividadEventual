@@ -6,6 +6,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.net.wifi.WifiManager;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,10 +23,14 @@ public class MainActivity extends AppCompatActivity {
     private Button btnExampleInconsistentMessage;
     private Button btnTestInconsistentMessage;
     private Context context = this;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         description = findViewById(R.id.antipattern);
         inconsistentMessageDetail = findViewById(R.id.inconsistentMessageDetail);
         btnInconsistentMessage = findViewById(R.id.btnInconsistentMessage);
@@ -93,5 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
 }

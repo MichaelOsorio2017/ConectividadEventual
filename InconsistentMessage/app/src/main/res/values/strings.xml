@@ -7,4 +7,6 @@
     <string name="live_test">Live Test</string>
     <string name="see_examples">see examples</string>
     <string name="inconsistentMessageDescription">The app shows an inconsistent message. It says something that has nothing to do with the action performed by the user.</string>
+    <string name="facebook_app_id">142070253143808</string>
+    <string name="fb_login_protocol_scheme">fb142070253143808</string>
 </resources>

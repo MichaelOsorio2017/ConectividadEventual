@@ -6,8 +6,7 @@ import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
-
-
+import android.widget.Toast;
 
 
 public class StuckedProgressActivity extends AppCompatActivity {
@@ -19,6 +18,8 @@ public class StuckedProgressActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stucked_progress);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
     }
 
     @Override

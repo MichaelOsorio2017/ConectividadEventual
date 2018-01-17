@@ -1,6 +1,7 @@
 package com.example.stive.phantombehaviorerror;
 
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -13,6 +14,7 @@ import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.telecom.Call;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -20,8 +22,18 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+import com.facebook.AccessToken;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
+
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,12 +44,14 @@ public class MainActivity extends AppCompatActivity {
     private Button btnStuckedProgressNotiExamples;
     private Button btnLiveTest;
     private ImageView image;
+    private LoginManager loginManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        FacebookSdk.sdkInitialize(this);
         btnStuckedProgressNotification = (Button)findViewById(R.id.btnStuckedProgressNoti);
         stuckedProgressDetail = (RelativeLayout)findViewById(R.id.stuckedProgressNotiDetail);
         description = (TextView)findViewById(R.id.antipattern);
@@ -103,8 +117,38 @@ public class MainActivity extends AppCompatActivity {
         btnLiveTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context,StuckedProgressActivity.class);
-                startActivity(intent);
+                if(AccessToken.getCurrentAccessToken() == null) {
+                    loginManager.logInWithReadPermissions(MainActivity.this, Collections.singletonList("user_friends"));
+                }else{
+                    loginManager.logOut();
+                    AccessToken.setCurrentAccessToken(null);
+                }
+            }
+
+        });
+
+        setupFacebookLogin();
+
+    }
+
+    private void setupFacebookLogin(){
+        CallbackManager callbackManager = CallbackManager.Factory.create();
+        loginManager = LoginManager.getInstance();
+        loginManager.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                AccessToken accessToken = AccessToken.getCurrentAccessToken();
+                Toast.makeText(getApplicationContext(),"Log In successfully",Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCancel() {
+                Toast.makeText(getApplicationContext(),"Log In aborted",Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+                Toast.makeText(getApplicationContext(),"Error log in",Toast.LENGTH_SHORT).show();
             }
         });
     }
