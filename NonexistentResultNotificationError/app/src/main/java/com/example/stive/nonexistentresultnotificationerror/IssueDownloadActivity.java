@@ -38,7 +38,7 @@ public class IssueDownloadActivity extends AppCompatActivity {
 
         protected Bitmap doInBackground(Void... voids) {
             try {
-                InputStream inputStream = new java.net.URL("https://github.com/MichaelOsorio2017/ConectividadEventual/blob/master/Resources/androidIcon.png?raw=true").openStream();
+                InputStream inputStream = new java.net.URL("https://github.com/MichaelOsorio2017/ConectividadEventual/blob/master/Resources/coffee.jpg").openStream();
                 BitmapFactory.Options options = new BitmapFactory.Options();
                 options.inSampleSize = 1;
                 return BitmapFactory.decodeStream(inputStream);
