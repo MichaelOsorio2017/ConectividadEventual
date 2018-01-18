@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         btnRetryingAction = findViewById(R.id.btnRetryingAnAction);
 
         btnTestDownLoadingContent = findViewById(R.id.btnTestDownloadContent);
-        btnTestIssueDownloading = findViewById(R.id.btnIssueDownloadingContent);
+        btnTestIssueDownloading = findViewById(R.id.btnTestDownloadContentIssue);
         btnTestActionPerformedSuccessfully = findViewById(R.id.btnTestActionPerformedSuccess);
         btnTestProblemWhenPerformingAction = findViewById(R.id.btnTestProblemPerformingAction);
         btnTestExecutedInBackground = findViewById(R.id.btnTestProcessInBackground);
@@ -323,7 +323,8 @@ public class MainActivity extends AppCompatActivity {
         btnTestIssueDownloading.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getApplicationContext(),IssueDownloadActivity.class);
+                startActivity(intent);
             }
         });
 
